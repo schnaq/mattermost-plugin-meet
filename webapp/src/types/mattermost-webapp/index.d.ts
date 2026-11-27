@@ -196,7 +196,7 @@ export interface PluginRegistry {
     */
     registerRootComponent(
         ...args: [
-            component: ReactResolvable
+            component: ReactResolvable,
         ] | [{
             component: ReactResolvable;
         }]
@@ -208,7 +208,7 @@ export interface PluginRegistry {
     */
     registerPopoverUserAttributesComponent(
         ...args: [
-            component: ReactResolvable
+            component: ReactResolvable,
         ] | [{
             component: ReactResolvable;
         }]
@@ -220,7 +220,7 @@ export interface PluginRegistry {
     */
     registerPopoverUserActionsComponent(
         ...args: [
-            component: ReactResolvable
+            component: ReactResolvable,
         ] | [{
             component: ReactResolvable;
         }]
@@ -232,7 +232,7 @@ export interface PluginRegistry {
     */
     registerLeftSidebarHeaderComponent(
         ...args: [
-            component: ReactResolvable
+            component: ReactResolvable,
         ] | [{
             component: ReactResolvable;
         }]
@@ -245,7 +245,7 @@ export interface PluginRegistry {
     */
     registerBottomTeamSidebarComponent(
         ...args: [
-            component: ReactResolvable
+            component: ReactResolvable,
         ] | [{
             component: ReactResolvable;
         }]
@@ -257,7 +257,7 @@ export interface PluginRegistry {
     */
     registerPostMessageAttachmentComponent(
         ...args: [
-            component: ReactResolvable
+            component: ReactResolvable,
         ] | [{
             component: ReactResolvable;
         }]
@@ -272,7 +272,7 @@ export interface PluginRegistry {
     */
     registerLinkTooltipComponent(
         ...args: [
-            component: ReactResolvable
+            component: ReactResolvable,
         ] | [{
             component: ReactResolvable;
         }]
@@ -285,7 +285,7 @@ export interface PluginRegistry {
     */
     registerActionAfterChannelCreation(
         ...args: [
-            component: ReactResolvable
+            component: ReactResolvable,
         ] | [{
             component: ReactResolvable;
         }]
@@ -305,7 +305,7 @@ export interface PluginRegistry {
             icon: ReactResolvable,
             action: () => void,
             dropdownText: ReactResolvable,
-            tooltipText: ReactResolvable
+            tooltipText: ReactResolvable,
         ] | [{
             icon: ReactResolvable;
             action: () => void;
@@ -322,7 +322,7 @@ export interface PluginRegistry {
     */
     registerChannelHeaderIcon(
         ...args: [
-            component: ReactResolvable
+            component: ReactResolvable,
         ] | [{
             component: ReactResolvable;
         }]
@@ -339,7 +339,7 @@ export interface PluginRegistry {
         ...args: [
             icon: ReactResolvable,
             action: () => void,
-            tooltipText: ReactResolvable
+            tooltipText: ReactResolvable,
         ] | [{
             icon: ReactResolvable;
             action: () => void;
@@ -361,7 +361,7 @@ export interface PluginRegistry {
         ...args: [
             button: ReactResolvable,
             dropdownButton: ReactResolvable,
-            fn: (channel: Channel) => void
+            fn: (channel: Channel) => void,
         ] | [{
             button: ReactResolvable;
             dropdownButton: ReactResolvable;
@@ -379,7 +379,7 @@ export interface PluginRegistry {
     registerPostTypeComponent(
         ...args: [
             typeName: string,
-            component: ReactResolvable
+            component: ReactResolvable,
         ] | [{
             typeName: string;
             component: ReactResolvable;
@@ -395,7 +395,7 @@ export interface PluginRegistry {
     registerPostCardTypeComponent(
         ...args: [
             type: string,
-            component: ReactResolvable
+            component: ReactResolvable,
         ] | [{
             type: string;
             component: ReactResolvable;
@@ -418,7 +418,7 @@ export interface PluginRegistry {
         ...args: [
             match: (embed: PostEmbed) => void,
             component: ReactResolvable,
-            toggleable: boolean
+            toggleable: boolean,
         ] | [{
             match: (embed: PostEmbed) => void;
             component: ReactResolvable;
@@ -438,7 +438,7 @@ export interface PluginRegistry {
         ...args: [
             text: ReactResolvable,
             action: () => void,
-            mobileIcon: ReactResolvable
+            mobileIcon: ReactResolvable,
         ] | [{
             text: ReactResolvable;
             action: () => void;
@@ -479,7 +479,7 @@ export interface PluginRegistry {
         ...args: [
             match: (fileInfo: FileInfo) => boolean,
             text: ReactResolvable,
-            action: (fileInfo: FileInfo) => void
+            action: (fileInfo: FileInfo) => void,
         ] | [{
             match: (fileInfo: FileInfo) => boolean;
             text: ReactResolvable;
@@ -497,7 +497,7 @@ export interface PluginRegistry {
     registerUserGuideDropdownMenuAction(
         ...args: [
             text: ReactResolvable,
-            action: (fileInfo: FileInfo) => void
+            action: (fileInfo: FileInfo) => void,
         ] | [{
             text: ReactResolvable;
             action: (fileInfo: FileInfo) => void;
@@ -510,7 +510,7 @@ export interface PluginRegistry {
     */
     registerPostActionComponent(
         ...args: [
-            component: ReactResolvable
+            component: ReactResolvable,
         ] | [{
             component: ReactResolvable;
         }]
@@ -522,7 +522,7 @@ export interface PluginRegistry {
     */
     registerPostEditorActionComponent(
         ...args: [
-            component: ReactResolvable
+            component: ReactResolvable,
         ] | [{
             component: ReactResolvable;
         }]
@@ -534,7 +534,7 @@ export interface PluginRegistry {
     */
     registerCodeBlockActionComponent(
         ...args: [
-            component: ReactResolvable
+            component: ReactResolvable,
         ] | [{
             component: ReactResolvable;
         }]
@@ -546,7 +546,7 @@ export interface PluginRegistry {
     */
     registerNewMessagesSeparatorActionComponent(
         ...args: [
-            component: ReactResolvable
+            component: ReactResolvable,
         ] | [{
             component: ReactResolvable;
         }]
@@ -564,7 +564,7 @@ export interface PluginRegistry {
         ...args: [
             text: React.ReactNode,
             action: () => void,
-            filter: (post: Post) => boolean
+            filter: (post: Post) => boolean,
         ] | [{
             text: React.ReactNode;
             action: () => void;
@@ -586,7 +586,7 @@ export interface PluginRegistry {
         ...args: [
             text: ReactResolvable,
             action: (postId: string) => void,
-            filter: (postId: string) => boolean
+            filter: (postId: string) => boolean,
         ] | [{
             text: ReactResolvable;
             action: (postId: string) => void;
@@ -597,7 +597,7 @@ export interface PluginRegistry {
         rootRegisterMenuItem: (
             text: React.ReactNode,
             action: () => void,
-            filter: (post: Post) => boolean
+            filter: (post: Post) => boolean,
         ) => void;
     };
 
@@ -613,7 +613,7 @@ export interface PluginRegistry {
         ...args: [
             icon: ReactResolvable,
             action: (checkPluginHooksAndUploadFiles: ((files: FileList | File[]) => void)) => void,
-            text: ReactResolvable
+            text: ReactResolvable,
         ] | [{
             icon: ReactResolvable;
             action: (checkPluginHooksAndUploadFiles: ((files: FileList | File[]) => void)) => void;
@@ -635,7 +635,7 @@ export interface PluginRegistry {
             hook: (files: File[], uploadFiles: (files: File[]) => void) => {
                 message?: string;
                 files?: File[];
-            }
+            },
         ] | [{
             hook: (files: File[], uploadFiles: (files: File[]) => void) => {
                 message?: string;
@@ -651,7 +651,7 @@ export interface PluginRegistry {
     */
     unregisterComponent(
         ...args: [
-            componentId: UniqueIdentifier
+            componentId: UniqueIdentifier,
         ] | [{
             componentId: UniqueIdentifier;
         }]
@@ -664,7 +664,7 @@ export interface PluginRegistry {
     */
     unregisterPostTypeComponent(
         ...args: [
-            componentId: UniqueIdentifier
+            componentId: UniqueIdentifier,
         ] | [{
             componentId: UniqueIdentifier;
         }]
@@ -677,7 +677,7 @@ export interface PluginRegistry {
     */
     registerReducer(
         ...args: [
-            reducer: Reducer
+            reducer: Reducer,
         ] | [{
             reducer: Reducer;
         }]
@@ -694,7 +694,7 @@ export interface PluginRegistry {
     registerWebSocketEventHandler<T = Record<string, string>>(
         ...args: [
             event: string,
-            handler: (msg: WebSocketMessage<T>) => void
+            handler: (msg: WebSocketMessage<T>) => void,
         ] | [{
             event: string;
             handler: (msg: WebSocketMessage<T>) => void;
@@ -708,7 +708,7 @@ export interface PluginRegistry {
     */
     unregisterWebSocketEventHandler(
         ...args: [
-            event: string
+            event: string,
         ] | [{
             event: string;
         }]
@@ -721,7 +721,7 @@ export interface PluginRegistry {
     */
     registerReconnectHandler(
         ...args: [
-            handler: () => void
+            handler: () => void,
         ] | [{
             handler: () => void;
         }]
@@ -748,9 +748,9 @@ export interface PluginRegistry {
     */
     registerMessageWillBePostedHook(
         ...args: [
-            hook: (post: Post) => ({ post: Post } | {error: { message: string }} | Promise<{ post: Post } | { error: { message: string } }>)
+            hook: (post: Post) => ({post: Post} | {error: {message: string}} | Promise<{post: Post} | {error: {message: string}}>),
         ] | [{
-            hook: (post: Post) => ({ post: Post } | {error: { message: string }} | Promise<{ post: Post } | { error: { message: string } }>);
+            hook: (post: Post) => ({post: Post} | {error: {message: string}} | Promise<{post: Post} | {error: {message: string}}>);
         }]
     ): UniqueIdentifier;
 
@@ -778,9 +778,9 @@ export interface PluginRegistry {
     */
     registerSlashCommandWillBePostedHook(
         ...args: [
-            hook: (message: string, args: ContextArgs) => ({ message: string; args: ContextArgs } | object | Promise<{ message: string; args: ContextArgs } | object>)
+            hook: (message: string, args: ContextArgs) => ({message: string; args: ContextArgs} | object | Promise<{message: string; args: ContextArgs} | object>),
         ] | [{
-            hook: (message: string, args: ContextArgs) => ({ message: string; args: ContextArgs } | object | Promise<{ message: string; args: ContextArgs } | object>);
+            hook: (message: string, args: ContextArgs) => ({message: string; args: ContextArgs} | object | Promise<{message: string; args: ContextArgs} | object>);
         }]
     ): UniqueIdentifier;
 
@@ -793,7 +793,7 @@ export interface PluginRegistry {
     */
     registerMessageWillFormatHook(
         ...args: [
-            hook: (post: Post, message: string) => string
+            hook: (post: Post, message: string) => string,
         ] | [{
             hook: (post: Post, message: string) => string;
         }]
@@ -811,7 +811,7 @@ export interface PluginRegistry {
     registerFilePreviewComponent(
         ...args: [
             override: (fileInfos: FileInfo[], post: Post) => boolean,
-                    component: ReactResolvable
+                    component: ReactResolvable,
         ] | [{
             override: (fileInfos: FileInfo[], post: Post) => boolean;
             component: ReactResolvable;
@@ -820,9 +820,9 @@ export interface PluginRegistry {
 
     registerTranslations(
         ...args: [
-            getTranslationsForLocale: (locale: string) => { [translationId: string]: string }
+            getTranslationsForLocale: (locale: string) => {[translationId: string]: string},
         ] | [{
-            getTranslationsForLocale: (locale: string) => { [translationId: string]: string };
+            getTranslationsForLocale: (locale: string) => {[translationId: string]: string};
         }]
     ): void;
 
@@ -838,7 +838,7 @@ export interface PluginRegistry {
     */
     registerAdminConsolePlugin(
         ...args: [
-            func: (config: object) => void
+            func: (config: object) => void,
         ] | [{
             func: (config: object) => void;
         }]
@@ -864,11 +864,11 @@ export interface PluginRegistry {
         ...args: [
             key: string,
             component: ReactResolvable,
-            options?: { showTitle?: boolean }
+            options?: {showTitle?: boolean},
         ] | [{
             key: string;
             component: ReactResolvable;
-            options?: { showTitle?: boolean };
+            options?: {showTitle?: boolean};
         }]
     ): void;
 
@@ -881,7 +881,7 @@ export interface PluginRegistry {
     registerAdminConsoleCustomSection(
         ...args: [
             key: string,
-            component: ReactResolvable
+            component: ReactResolvable,
         ] | [{
             key: string;
             component: ReactResolvable;
@@ -902,7 +902,7 @@ export interface PluginRegistry {
     registerRightHandSidebarComponent(
         ...args: [
             component: ReactResolvable,
-            title: ReactResolvable
+            title: ReactResolvable,
         ] | [{
             component: ReactResolvable;
             title: ReactResolvable;
@@ -925,7 +925,7 @@ export interface PluginRegistry {
     registerNeedsTeamRoute(
         ...args: [
             route: string,
-            component: ReactResolvable
+            component: ReactResolvable,
         ] | [{
             route: string;
             component: ReactResolvable;
@@ -935,7 +935,7 @@ export interface PluginRegistry {
     registerCustomRoute(
         ...args: [
             route: string,
-                    component: ReactResolvable
+                    component: ReactResolvable,
         ] | [{
             route: string;
             component: ReactResolvable;
@@ -951,7 +951,7 @@ export interface PluginRegistry {
             mainComponent: ReactResolvable,
             headerCentreComponent: ReactResolvable,
             headerRightComponent?: ReactResolvable,
-            showTeamSidebar: boolean
+            showTeamSidebar: boolean,
         ] | [{
             baseURL: string;
             switcherIcon: string;
@@ -979,9 +979,9 @@ export interface PluginRegistry {
     */
     registerMessageWillBeUpdatedHook(
         ...args: [
-            hook: (post: Partial<Post>, oldPost: Post) => Promise<{ error: { message: string } } | { post: Post }>
+            hook: (post: Partial<Post>, oldPost: Post) => Promise<{error: {message: string}} | {post: Post}>,
         ] | [{
-            hook: (post: Partial<Post>, oldPost: Post) => Promise<{ error: { message: string } } | { post: Post }>;
+            hook: (post: Partial<Post>, oldPost: Post) => Promise<{error: {message: string}} | {post: Post}>;
         }]
     ): UniqueIdentifier;
 
@@ -993,7 +993,7 @@ export interface PluginRegistry {
     */
     registerSidebarChannelLinkLabelComponent(
         ...args: [
-            component: ReactResolvable
+            component: ReactResolvable,
         ] | [{
             component: ReactResolvable;
         }]
@@ -1007,7 +1007,7 @@ export interface PluginRegistry {
     */
     registerChannelToastComponent(
         ...args: [
-            component: ReactResolvable
+            component: ReactResolvable,
         ] | [{
             component: ReactResolvable;
         }]
@@ -1021,7 +1021,7 @@ export interface PluginRegistry {
     */
     registerGlobalComponent(
         ...args: [
-            component: ReactResolvable
+            component: ReactResolvable,
         ] | [{
             component: ReactResolvable;
         }]
@@ -1070,7 +1070,7 @@ export interface PluginRegistry {
     */
     registerSiteStatisticsHandler(
         ...args: [
-            handler: PluginSiteStatsHandler
+            handler: PluginSiteStatsHandler,
         ] | [{
             handler: PluginSiteStatsHandler;
         }]
@@ -1117,18 +1117,18 @@ export interface PluginRegistry {
                 msgProps: NewPostMessageProps,
                 channel: Channel,
                 teamId: string,
-                args: DesktopNotificationArgs
+                args: DesktopNotificationArgs,
             ) => Promise<{
                 error?: string;
                 args?: DesktopNotificationArgs;
-            }>
+            }>,
         ] | [{
             hook: (
                 post: Post,
                 msgProps: NewPostMessageProps,
                 channel: Channel,
                 teamId: string,
-                args: DesktopNotificationArgs
+                args: DesktopNotificationArgs,
             ) => Promise<{
                 error?: string;
                 args?: DesktopNotificationArgs;
@@ -1147,7 +1147,7 @@ export interface PluginRegistry {
     */
     registerUserSettings(
         ...args: [
-            setting: PluginConfiguration
+            setting: PluginConfiguration,
         ] | [{
             setting: PluginConfiguration;
         }]
@@ -1159,7 +1159,7 @@ export interface PluginRegistry {
     */
     registerSystemConsoleGroupTable(
         ...args: [
-            component: ReactResolvable
+            component: ReactResolvable,
         ] | [{
             component: ReactResolvable;
         }]

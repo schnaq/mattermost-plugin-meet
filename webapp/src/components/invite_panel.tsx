@@ -22,7 +22,7 @@ export function InvitePanel({huddle, onDone}: {huddle: HuddleView; onDone: () =>
     const dispatch = useThunkDispatch();
     const {run, busy, error} = useAction();
     const me = useMe();
-    const getProfiles = useMemo(makeGetProfilesInChannel, []);
+    const getProfiles = useMemo(() => makeGetProfilesInChannel(), []);
     const members = useSelector((s: any) => getProfiles(s, huddle.channel_id));
     const nameDisplay = useSelector(getTeammateNameDisplaySetting as any) as string;
 
