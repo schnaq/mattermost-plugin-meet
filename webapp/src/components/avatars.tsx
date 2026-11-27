@@ -1,4 +1,3 @@
-
 import {Client4} from 'mattermost-redux/client';
 
 import type {ParticipantView} from '../client';
