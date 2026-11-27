@@ -53,7 +53,7 @@ func TestUpdateHuddleGivesUp(t *testing.T) {
 	n := 0
 	_, err := s.UpdateHuddle("c1", func(h *Huddle) error {
 		n++
-		return base.Set("h:c1", &Huddle{ID: "h1", ChannelID: "c1", PostID: string(rune('a' + n))})
+		return base.Set("h:c1", &Huddle{ID: "h1", ChannelID: "c1", PostID: strings.Repeat("a", n)})
 	})
 	if err == nil || n != 5 {
 		t.Fatalf("err=%v attempts=%d", err, n)

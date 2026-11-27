@@ -47,6 +47,11 @@ linters:
       - path: _test\.go
         linters:
           - bodyclose
+      # Dev deploy tool: the socket path and site URL come from the developer's own environment.
+      - path: build/pluginctl/
+        linters:
+          - gosec
+        text: G70[46]
 
 formatters:
   enable:

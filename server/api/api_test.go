@@ -33,6 +33,7 @@ type fakeSvc struct {
 }
 
 func (f *fakeSvc) Active(string) ([]huddle.HuddleView, error) { return []huddle.HuddleView{}, f.err }
+
 func (f *fakeSvc) Start(_ context.Context, _, ch string) (huddle.StartResult, error) {
 	return huddle.StartResult{Huddle: huddle.HuddleView{ID: "h1", ChannelID: ch}, MeetURL: "https://meet.test/abc", AlreadyRunning: true}, f.err
 }
