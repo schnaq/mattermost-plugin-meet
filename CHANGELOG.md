@@ -6,6 +6,17 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.2.0] - 2026-11-27
+
+### Changed
+
+- Requires the React 19 runtime that Mattermost 12.1 ships; JSX now uses the host's JSX runtime.
+- Toolchain: Go 1.27, Node 26 LTS, Babel 8, ESLint 10 (flat config), TypeScript 6, webpack-cli 7.
+
+### Fixed
+
+- The plugin bundle no longer injects global polyfills into the Mattermost page.
+
 ## [0.1.0] - 2026-11-27
 
 Initial public release.
@@ -25,5 +36,6 @@ Initial public release.
 - Mobile fallback: the huddle card is a post attachment with a Join button.
 - Demo build (`-tags demo`) with a fake Google backend for local development.
 
-[Unreleased]: https://github.com/schnaq/mattermost-plugin-meet/compare/v0.1.0...HEAD
+[Unreleased]: https://github.com/schnaq/mattermost-plugin-meet/compare/v0.2.0...HEAD
+[0.2.0]: https://github.com/schnaq/mattermost-plugin-meet/compare/v0.1.0...v0.2.0
 [0.1.0]: https://github.com/schnaq/mattermost-plugin-meet/releases/tag/v0.1.0
