@@ -1,0 +1,32 @@
+.Meet-Avatars {
+    display: inline-flex;
+    align-items: center;
+}
+
+.Meet-Avatars__avatar {
+    width: 20px;
+    height: 20px;
+    border: 1px solid var(--center-channel-bg);
+    border-radius: var(--radius-pill, 999px);
+    margin-left: -6px;
+    background: rgba(var(--center-channel-color-rgb), 0.16);
+    color: var(--center-channel-color);
+    font-size: 9px;
+    object-fit: cover;
+}
+
+.Meet-Avatars__avatar:first-child {
+    margin-left: 0;
+}
+
+.Meet-Avatars__avatar--initials {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Meet-Avatars__more {
+    margin-left: var(--spacing-xs, 4px);
+    color: rgba(var(--center-channel-color-rgb), 0.72);
+    font-size: var(--font-size-75, 11px);
+}

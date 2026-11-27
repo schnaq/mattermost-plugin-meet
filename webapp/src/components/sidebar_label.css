@@ -1,0 +1,8 @@
+.Meet-SidebarLabel {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-xxs, 2px);
+    margin-left: var(--spacing-xs, 4px);
+    color: var(--online-indicator);
+    font-size: var(--font-size-75, 11px);
+}

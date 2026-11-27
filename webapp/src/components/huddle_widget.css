@@ -1,0 +1,25 @@
+.Meet-Widget {
+    position: fixed;
+    z-index: 100;
+    bottom: var(--spacing-l, 16px);
+    left: var(--spacing-l, 16px);
+    max-width: 280px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.16);
+}
+
+.Meet-Widget__head {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--spacing-s, 8px);
+}
+
+.Meet-Widget__link {
+    overflow: hidden;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: var(--link-color);
+    font-weight: var(--font-weight-semibold, 600);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}

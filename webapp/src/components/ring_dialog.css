@@ -1,0 +1,34 @@
+.Meet-Ring {
+    position: fixed;
+    z-index: 9999;
+    top: var(--spacing-xl, 24px);
+    right: var(--spacing-xl, 24px);
+    width: 320px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.24);
+}
+
+/* Two classes: win over .Meet-Card / .Meet-Button regardless of stylesheet order. */
+.Meet-Card.Meet-Ring {
+    padding: var(--spacing-l, 16px);
+    border-radius: var(--radius-l, 12px);
+}
+
+.Meet-Ring__avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+}
+
+.Meet-Ring__text {
+    display: flex;
+    flex-direction: column;
+}
+
+.Meet-Ring__channel {
+    color: rgba(var(--center-channel-color-rgb), 0.72);
+    font-size: var(--font-size-100, 14px);
+}
+
+.Meet-Button.Meet-Ring__accept {
+    background: var(--online-indicator);
+}

@@ -1,0 +1,14 @@
+.Meet-Toast {
+    position: fixed;
+    z-index: 9999;
+    bottom: var(--spacing-xl, 24px);
+    left: 50%;
+    padding: var(--spacing-s, 8px) var(--spacing-l, 16px);
+    border: 1px solid rgba(var(--center-channel-color-rgb), 0.16);
+    border-radius: var(--radius-pill, 999px);
+    background: var(--center-channel-bg);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.16);
+    color: var(--center-channel-color);
+    font-size: var(--font-size-100, 14px);
+    transform: translateX(-50%);
+}

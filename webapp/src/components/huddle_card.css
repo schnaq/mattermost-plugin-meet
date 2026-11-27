@@ -1,0 +1,18 @@
+.Meet-HuddleCard {
+    max-width: 420px;
+}
+
+/* Two classes: wins over .Meet-Card--accent regardless of stylesheet order. */
+.Meet-Card--accent.Meet-HuddleCard--ended {
+    border-left-color: rgba(var(--center-channel-color-rgb), 0.32);
+}
+
+.Meet-HuddleCard__head {
+    display: flex;
+    justify-content: space-between;
+}
+
+.Meet-HuddleCard__names {
+    color: rgba(var(--center-channel-color-rgb), 0.72);
+    font-size: var(--font-size-100, 14px);
+}

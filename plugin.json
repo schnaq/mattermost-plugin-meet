@@ -1,0 +1,67 @@
+{
+    "id": "com.schnaq.meet",
+    "name": "Meet Huddles",
+    "description": "Slack-style huddles for Mattermost, backed by Google Meet.",
+    "homepage_url": "https://github.com/schnaq/mattermost-plugin-meet",
+    "support_url": "https://github.com/schnaq/mattermost-plugin-meet/issues",
+    "min_server_version": "12.1.0",
+    "server": {
+        "executables": {
+            "linux-amd64": "server/dist/plugin-linux-amd64",
+            "linux-arm64": "server/dist/plugin-linux-arm64",
+            "darwin-amd64": "server/dist/plugin-darwin-amd64",
+            "darwin-arm64": "server/dist/plugin-darwin-arm64",
+            "windows-amd64": "server/dist/plugin-windows-amd64.exe"
+        }
+    },
+    "webapp": {
+        "bundle_path": "webapp/dist/main.js"
+    },
+    "settings_schema": {
+        "header": "",
+        "footer": "",
+        "settings": [
+            {
+                "key": "ServiceAccountJSON",
+                "display_name": "Service account JSON key:",
+                "type": "longtext",
+                "help_text": "JSON key of the Google service account that has domain-wide delegation for the Meet REST API and the Admin SDK. See docs/google-setup.md. Treat it as a secret.",
+                "placeholder": "",
+                "default": null,
+                "secret": true
+            },
+            {
+                "key": "GoogleAccounts",
+                "display_name": "Google accounts:",
+                "type": "longtext",
+                "help_text": "One line per Mattermost user in the form username=google-email, for example alice=alice@example.com. These users host their huddles as that Google account. Lines starting with # are ignored.",
+                "placeholder": "",
+                "default": null
+            },
+            {
+                "key": "FallbackOwnerEmail",
+                "display_name": "Fallback owner email:",
+                "type": "text",
+                "help_text": "Google account that hosts huddles started by users who are not listed under Google accounts. If empty, those users can join huddles but not start them.",
+                "placeholder": "",
+                "default": null
+            },
+            {
+                "key": "StatusText",
+                "display_name": "Status text:",
+                "type": "text",
+                "help_text": "Custom status text shown while a user is in a huddle.",
+                "placeholder": "",
+                "default": "In a huddle"
+            },
+            {
+                "key": "StatusEmoji",
+                "display_name": "Status emoji:",
+                "type": "text",
+                "help_text": "Emoji name (without colons) for the custom status, for example headphones.",
+                "placeholder": "",
+                "default": "headphones"
+            }
+        ]
+    }
+}

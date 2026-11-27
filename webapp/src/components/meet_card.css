@@ -1,0 +1,25 @@
+.Meet-Card {
+    display: flex;
+    flex-direction: column;
+    padding: var(--spacing-m, 12px);
+    border: 1px solid rgba(var(--center-channel-color-rgb), 0.16);
+    border-radius: var(--radius-m, 8px);
+    background: var(--center-channel-bg);
+    color: var(--center-channel-color);
+    gap: var(--spacing-s, 8px);
+}
+
+.Meet-Card--accent {
+    border-left: 4px solid var(--online-indicator);
+}
+
+.Meet-Card__actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--spacing-s, 8px);
+}
+
+.Meet-Card__timer {
+    font-variant-numeric: tabular-nums;
+}

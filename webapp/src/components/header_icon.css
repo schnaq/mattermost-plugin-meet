@@ -1,0 +1,43 @@
+.Meet-HeaderIcon {
+    position: relative;
+    display: inline-flex;
+}
+
+.Meet-HeaderIcon__button {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-xs, 4px);
+    padding: var(--spacing-xs, 4px) var(--spacing-s, 8px);
+    border: none;
+    border-radius: var(--radius-s, 4px);
+    background: transparent;
+    color: rgba(var(--center-channel-color-rgb), 0.64);
+}
+
+.Meet-HeaderIcon__button:hover {
+    background: rgba(var(--center-channel-color-rgb), 0.08);
+}
+
+.Meet-HeaderIcon__button--active {
+    color: var(--online-indicator);
+}
+
+.Meet-HeaderIcon__label {
+    font-size: var(--font-size-100, 14px);
+    font-weight: var(--font-weight-semibold, 600);
+}
+
+.Meet-HeaderIcon__error {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    z-index: 10;
+    width: max-content;
+    max-width: 260px;
+    padding: var(--spacing-xs, 4px) var(--spacing-s, 8px);
+    border: 1px solid rgba(var(--center-channel-color-rgb), 0.16);
+    border-radius: var(--radius-s, 4px);
+    background: var(--center-channel-bg);
+    color: var(--error-text);
+    font-size: var(--font-size-75, 11px);
+}
