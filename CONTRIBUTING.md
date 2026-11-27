@@ -21,6 +21,10 @@ cd webapp && npm test   # webapp tests only
 Edit `plugin.json` for the manifest and run `make apply` (also part of the build) to regenerate
 `server/manifest.go` and `webapp/src/manifest.ts`; both are git-ignored.
 
+`webapp/package.json` overrides the `eslint` and `typescript` peer ranges: eslint-plugin-react and
+eslint-plugin-jsx-a11y don't list ESLint 10 yet, and the `@mattermost/*` packages and mattermost-redux still ask for
+TypeScript 5. Drop an override once those packages support the versions in use.
+
 ## Demo build
 
 The demo build replaces Google with a fake, so you can try the UI without a Workspace domain (and take

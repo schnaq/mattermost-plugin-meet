@@ -56,7 +56,6 @@ test('ending huddle offers no join', () => {
 });
 
 test('non-Error rejection shows a generic message', async () => {
-    // eslint-disable-next-line prefer-promise-reject-errors
     (actions.startAndOpen as jest.Mock).mockReturnValueOnce(() => new Promise((_, reject) => reject('nope')));
     render(wrap(makeState(), <HeaderIcon channel={channel}/>));
     await userEvent.click(screen.getByRole('button', {name: 'Start huddle'}));
