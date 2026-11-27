@@ -2,18 +2,16 @@
 // See LICENSE.txt for license information.
 
 module.exports = {
+
+    // Matches the browsers supported by the Mattermost web app.
+    targets: {
+        chrome: 110,
+        firefox: 102,
+        edge: 110,
+        safari: '16.4',
+    },
     presets: [
         ['@babel/preset-env', {
-
-            // Matches the browsers supported by the Mattermost web app.
-            targets: {
-                chrome: 110,
-                firefox: 102,
-                edge: 110,
-                safari: '16.4',
-            },
-            corejs: 3,
-            useBuiltIns: 'usage',
             shippedProposals: true,
         }],
 
@@ -21,9 +19,12 @@ module.exports = {
         ['@babel/preset-react', {
             runtime: 'automatic',
         }],
-        ['@babel/preset-typescript', {
-            allExtensions: true,
-            isTSX: true,
+        '@babel/preset-typescript',
+    ],
+    plugins: [
+        ['babel-plugin-polyfill-corejs3', {
+            method: 'usage-global',
+            version: require('core-js/package.json').version,
         }],
     ],
 };
