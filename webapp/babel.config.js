@@ -15,16 +15,10 @@ module.exports = {
             shippedProposals: true,
         }],
 
-        // The automatic runtime imports react/jsx-runtime, which webpack aliases to src/jsx_runtime.ts.
+        // The automatic runtime imports react/jsx-runtime, which webpack maps to the host's ReactJSXRuntime.
         ['@babel/preset-react', {
             runtime: 'automatic',
         }],
         '@babel/preset-typescript',
-    ],
-    plugins: [
-        ['babel-plugin-polyfill-corejs3', {
-            method: 'usage-global',
-            version: require('core-js/package.json').version,
-        }],
     ],
 };
