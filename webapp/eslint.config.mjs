@@ -17,21 +17,21 @@ export default [
     ...tseslint.configs.recommended,
 
     // eslint-plugin-react still calls context methods that ESLint 10 removed.
-    ...fixupConfigRules(react.configs.flat.recommended),
+    ...fixupConfigRules([react.configs.flat.recommended, react.configs.flat['jsx-runtime']]),
     reactHooks.configs.flat.recommended,
     jsxA11y.flatConfigs.recommended,
     {
-        languageOptions: {globals: {...globals.browser, ...globals.node}},
+        languageOptions: {globals: globals.browser},
         plugins: {'@stylistic': stylistic, import: importX},
         settings: {react: {version: 'detect'}},
         rules: {
-            // Babel drops only `import type`, so type-only imports must say so.
+            // Style: type-only imports say so.
             '@typescript-eslint/consistent-type-imports': ['error', {disallowTypeAnnotations: false}],
+            'no-console': 'error',
+            eqeqeq: ['error', 'smart'],
             '@typescript-eslint/no-explicit-any': 'off',
             'react/no-danger': 'error',
             'react/jsx-no-script-url': 'error',
-            'react/react-in-jsx-scope': 'off',
-            'jsx-a11y/no-noninteractive-element-interactions': 'warn',
 
             // Rules for the React Compiler, which the plugin doesn't use.
             'react-hooks/immutability': 'off',
@@ -68,6 +68,14 @@ export default [
             '@stylistic/jsx-first-prop-new-line': ['error', 'multiline'],
             '@stylistic/jsx-closing-bracket-location': ['error', 'tag-aligned'],
         },
+    },
+    {
+        files: ['**/*.test.{ts,tsx}', 'tests/**'],
+        languageOptions: {globals: globals.jest},
+    },
+    {
+        files: ['*.config.{js,mjs}'],
+        languageOptions: {globals: globals.node},
     },
     {
         files: ['babel.config.js'],

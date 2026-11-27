@@ -1,4 +1,5 @@
-import React, {useEffect, useRef} from 'react';
+import type React from 'react';
+import {useEffect, useRef} from 'react';
 import {FormattedMessage, useIntl} from 'react-intl';
 import {useSelector} from 'react-redux';
 
@@ -91,6 +92,8 @@ export function RingDialog() {
     const busyText = intl.formatMessage({id: 'meet.ring.reply_busy', defaultMessage: "Can't right now"});
 
     return (
+        // Escape dismisses the dialog, so its container takes the key handler (WAI-ARIA dialog pattern).
+        // eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions
         <div
             className='Meet-Card Meet-Ring'
             role='dialog'

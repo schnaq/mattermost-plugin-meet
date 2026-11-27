@@ -1,6 +1,5 @@
 import {act, render, screen} from '@testing-library/react';
 import manifest from 'manifest';
-import React from 'react';
 
 import {RingToast, TOAST_MS} from './ring_toast';
 

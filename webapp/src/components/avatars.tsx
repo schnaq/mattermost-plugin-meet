@@ -1,4 +1,3 @@
-import React from 'react';
 
 import {Client4} from 'mattermost-redux/client';
 
