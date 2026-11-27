@@ -5,7 +5,7 @@ Adapted from the Mattermost webapp's `webapp/AGENTS.md` and `STYLE_GUIDE.md` so 
 ## Host-provided packages
 
 - React, ReactDOM, react-intl, Redux, react-redux, react-router-dom and prop-types are webpack `externals` from the host. Their versions in `package.json` are dev-only and must match the host for `min_server_version`, so React is 19.2, as in Mattermost 12.1.0. Never bundle a second copy or move them to `dependencies`.
-- JSX compiles through `src/jsx_runtime.ts` because older hosts don't expose `window.ReactJSXRuntime`. Don't import `react/jsx-runtime` directly or remove the alias in `webpack.config.js`.
+- JSX compiles to `react/jsx-runtime`, which `webpack.config.js` maps to the host's `window.ReactJSXRuntime` (exposed since 12.0). Never bundle a JSX runtime.
 - `@mattermost/shared/*` loads from the host via `window.loadSharedDependency` (see `webpack.config.js`). Check which shared modules the host serves before importing one (older hosts only serve `components/emoji`); `min_server_version` is 12.1.0. Add `@mattermost/shared` as a devDependency for types on first use.
 - Host APIs for plugins live on `window.WebappUtils` (e.g. `modals.openModalById` for published host modals) and `window.PostUtils`. Don't use `window.Components` or `window.ProductApi`; they change without notice.
 - Don't add react-bootstrap, MUI, Emotion or Sass.

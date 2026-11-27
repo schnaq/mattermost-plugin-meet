@@ -39,10 +39,6 @@ const config = {
             'node_modules',
         ],
         extensions: ['.js', '.jsx', '.ts', '.tsx'],
-        alias: {
-            'react/jsx-runtime$': path.resolve(__dirname, 'src/jsx_runtime.ts'),
-            'react/jsx-dev-runtime$': path.resolve(__dirname, 'src/jsx_runtime.ts'),
-        },
     },
     module: {
         rules: [
@@ -53,6 +49,9 @@ const config = {
                     loader: 'babel-loader',
                     options: {
                         cacheDirectory: true,
+
+                        // Babel 8 compiles development JSX unless told otherwise; webpack's mode doesn't reach it.
+                        envName: isDev ? 'development' : 'production',
 
                         // Babel configuration is in babel.config.js because jest requires it to be there.
                     },
@@ -77,6 +76,9 @@ const config = {
         {
             react: 'React',
             'react-dom': 'ReactDOM',
+            'react-dom/client': 'ReactDOM',
+            'react/jsx-runtime': 'ReactJSXRuntime',
+            'react/jsx-dev-runtime': 'ReactJSXDevRuntime',
             'react-intl': 'ReactIntl',
             redux: 'Redux',
             'react-redux': 'ReactRedux',
